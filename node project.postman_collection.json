@@ -380,7 +380,7 @@
 			"name": "invoices",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "create sale",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -393,6 +393,40 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"userId\": \"67bc95fe359457bceb96687b\",\r\n  \"type\": \"sale\",\r\n  \"items\": [\r\n    {\r\n      \"productId\": \"67bc90f00d077552c5852ce9\",\r\n      \"quantity\": 2,\r\n      \"price\": 150\r\n    }\r\n  ],\r\n  \"total\": 300\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/invoices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"invoices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create purchse",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2JjOGRhNDBkMDc3NTUyYzU4NTJjZDUiLCJpYXQiOjE3NDA0MTAzMzEsImV4cCI6MTc0MDQxMzkzMX0.MWq0Rca5rZrCKFE1ssXAah4vXFv9xE9p0q-N2_TxKmo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"67bc95fe359457bceb96687b\",\r\n  \"type\": \"purchase\",\r\n  \"items\": [\r\n    {\r\n      \"productId\": \"67bc90f00d077552c5852ce9\",\r\n      \"quantity\": 5,\r\n      \"price\": 150\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
